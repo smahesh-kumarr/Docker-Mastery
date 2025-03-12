@@ -1,16 +1,13 @@
 version: "3.9"
-
 services:
-
   frontend:
-    image: maheshkumars772/frontend
+    image: maheshkumars772/frontend-2
     ports:
       - "3000:3000"
     networks:
       - blog-app-network
-
   backend:
-    image: maheshkumars772/backend
+    image: maheshkumars772/backend-2
     ports:
       - "4000:4000"
     networks:
@@ -21,8 +18,6 @@ services:
       - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
       - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
       - PORT=4000
-
 networks:
   blog-app-network:
     driver: bridge
-
